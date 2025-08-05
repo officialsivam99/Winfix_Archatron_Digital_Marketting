@@ -1,0 +1,123 @@
+.navbar{
+    height: 80px;
+}
+
+.nav-item{
+    margin-left: 40px;
+}
+.nav-item .nav-link{
+    font-size: 16px;
+    font-weight: 700;
+}
+.nav-item .nav-link:hover{
+  color: #000;
+    transition: width .5s ease;
+}
+.nav-bg{
+    background-color: #3c065e;
+    color: #fff;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+    color: #fe4c1c;
+}
+
+/* Highlight the dropdown toggle when active or hovered */
+.navbar .dropdown.active > a,
+.navbar .dropdown:hover > a {
+  color: #f8f9fa;
+  background-color: #343a40;
+}
+
+/* Style the dropdown menu */
+.dropdown-menu {
+  background-color: #212529; /* Dark background */
+  border: none;
+  border-radius: 0;
+  padding: 0.5rem 0;
+}
+
+.dropdown-menu .dropdown-item {
+  color: #f8f9fa; /* White text */
+  padding: 0.5rem 1.5rem;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+
+/* Highlight active or hovered dropdown toggle */
+.navbar .dropdown.active > a,
+.navbar .dropdown:hover > a {
+  color: #f8f9fa;
+  background-color: #343a40;
+}
+
+/* Dark dropdown menu styling */
+.dropdown-menu {
+  background-color: #212529;
+  border: none;
+  border-radius: 0;
+  padding: 0.5rem 0;
+  min-width: 220px;
+}
+
+.dropdown-menu .dropdown-item {
+  color: #f8f9fa;
+  padding: 0.5rem 1.5rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+/* Divider styling for dark theme */
+.dropdown-menu .dropdown-divider {
+  border-top: 1px solid #444;
+  margin: 0;
+}
+
+.navbar-nav {
+  justify-content: center;
+  width: 100%;
+}
+
+/* Only for the Services dropdown */
+/* Only for the Services dropdown */
+.navbar .services-dropdown .dropdown-menu {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;  /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background-color: #222 !important;
+}
+
+.navbar {
+  border: 1px solid rgba(255, 255, 255, 0.2); /* subtle white border */
+  /* border-radius: 0.5rem; rounded corners */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* shadow for depth */
+}
+
+.navbar {
+  background-color: rgba(20, 20, 20, 0.95) !important; /* slightly lighter with opacity */
+}
+
+/* style.css */
+body {
+  padding-top: 80px; /* adjust this based on navbar height */
+}
+
+
+
+
+
+
+
+
+

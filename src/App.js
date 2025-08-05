@@ -1,23 +1,56 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import { Routes, Route } from 'react-router-dom';
+
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './containers/Home';
+import Aboutus from './containers/Aboutus';
+import Teams from './containers/Teams';
+import Services from './containers/Services';
+import Contactus from './containers/Contactus';
+import Notfound from './containers/Notfound';
+import NewsLetters from './components/NewsLetters';
+import Price from './containers/Price';
+import Blog from './containers/Blog';
+import DigitalMarketing from './containers/Digital';
+import WebDesign from './containers/WebDesign';
+import WebDevelopment from './containers/WebDevelopment';
+import SocialMediaMarketing from './containers/SocialMedia';
+import SEO from './containers/SEO';
+import PPC from './containers/PPC'
+import EmailMarketing from './containers/Email';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Aboutus" element={<Aboutus />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/Teams" element={<Teams />} />
+        <Route path="/price" element={<Price />} />
+        <Route path="/contactus" element={<Contactus />} />
+        {/* 404 Not Found route */}
+        <Route path="*" element={<Notfound />} />
+        <Route path="Blog" element={<Blog />} />
+        <Route path="/DigitalMarketing" element={<DigitalMarketing />} />
+        <Route path="/WebDesign" element={<WebDesign />} />
+        <Route path="/WebDevelopment" element={<WebDevelopment />} />
+        <Route path="/SocialMediaMarketing" element={<SocialMediaMarketing />} />
+        <Route path="/SEO" element={<SEO />} />
+        <Route path="/PPC" element={<PPC />} />
+        <Route path="/EmailMarketing" element={<EmailMarketing />} />
+
+        
+      </Routes>
+      
+      <NewsLetters />
+      <Footer />
     </div>
   );
 }
