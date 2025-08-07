@@ -1,27 +1,120 @@
 import React from "react";
-import "./style.css"; // Optional if you have custom styles
+import { Link } from "react-router-dom";
+
+const newsletterSection = {
+  background: "#f8f9fa",
+  padding: "40px 0"
+};
+const newsletterInput = {
+  border: "1px solid #dee2e6",
+  borderRadius: "6px",
+  padding: "8px 12px",
+  marginRight: "10px",
+  width: "250px",
+  maxWidth: "90%",
+  outline: "none"
+};
+const newsletterButton = {
+  background: "#0d6efd",
+  color: "#fff",
+  border: "none",
+  padding: "8px 20px",
+  borderRadius: "6px",
+  fontWeight: 600,
+  cursor: "pointer"
+};
+
+const footerSection = {
+  background: "#212529",
+  color: "#fff",
+  paddingTop: "48px",
+  paddingBottom: "24px"
+};
+const containerStyle = {
+  maxWidth: "1240px",
+  margin: "0 auto",
+  padding: "0 20px"
+};
+const rowStyle = {
+  display: "flex",
+  flexWrap: "wrap",
+  gap: "32px 0"
+};
+const columnStyle = {
+  flex: "1 1 180px",
+  minWidth: "180px",
+  marginBottom: "24px"
+};
+const columnTitle = {
+  fontWeight: "bold",
+  fontSize: "17px",
+  marginBottom: "15px"
+};
+const footerLink = {
+  color: "#fff",
+  textDecoration: "none",
+  display: "block",
+  marginBottom: "8px",
+  fontSize: "15px",
+  transition: "color 0.2s"
+};
+
+const paymentRow = {
+  display: "flex",
+  gap: "10px",
+  background: "#fff",
+  borderRadius: "8px",
+  border: "1px solid #dee2e6",
+  padding: "7px 10px",
+  marginTop: "5px",
+  maxWidth: "180px"
+};
+
+const copyrightStyle = {
+  borderTop: "1px solid #333",
+  marginTop: "35px",
+  paddingTop: "16px",
+  textAlign: "center",
+  color: "#fff",
+  fontSize: "13px"
+};
+
+// Responsive tweaks (media query in JS)
+const responsiveFooter = `
+@media (max-width: 900px) {
+  .footer-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .footer-col {
+    margin-bottom: 28px !important;
+    min-width: unset !important;
+  }
+}
+`;
 
 export default function Footer() {
   return (
     <div>
+      {/* Inline CSS for mobile-responsiveness */}
+      <style>{responsiveFooter}</style>
       {/* Newsletter Section */}
-      <div className="newsletter py-5 bg-light">
-        <div className="container text-center">
-          <h6 className="text-uppercase">Newsletter</h6>
-          <h4 className="fw-bold">Subscribe To Our Newsletter</h4>
-          <p className="text-muted">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      <div style={newsletterSection}>
+        <div style={containerStyle} className="text-center">
+          <h6 style={{textTransform: "uppercase", letterSpacing: 2, fontSize: 14, color: "#444"}}>Newsletter</h6>
+          <h4 style={{fontWeight: "bold", margin: "0 0 8px"}}>Subscribe To Our Newsletter</h4>
+          <p style={{color: "#555", maxWidth: 550, margin: "0 auto 8px", fontSize: 15}}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <form className="d-flex justify-content-center flex-wrap gap-2 mt-3">
+          <form className="d-flex justify-content-center flex-wrap gap-2 mt-3" style={{justifyContent: "center", flexWrap: "wrap", gap: "10px"}}>
             <input
               type="text"
-              className="form-control w-auto"
+              style={newsletterInput}
               placeholder="Enter your email address"
               name="EMAIL"
               required
             />
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" style={newsletterButton}>
               Subscribe Now
             </button>
           </form>
@@ -29,191 +122,92 @@ export default function Footer() {
       </div>
 
       {/* Footer Section */}
-      <div className="footer bg-dark text-light pt-5 pb-3">
-        <div className="container">
-          <div className="row gy-4">
+      <div style={footerSection}>
+        <div style={containerStyle}>
+          <div className="footer-row" style={rowStyle}>
             {/* About Us */}
-            <div className="col-lg-4 col-md-6">
-              <h5 className="fw-bold">About Us</h5>
-              <p className="text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            <div className="footer-col" style={columnStyle}>
+              <div style={columnTitle}>About Us</div>
+              <p style={{color: "#fff", lineHeight: 1.7, fontSize: 15}}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco.
               </p>
             </div>
 
             {/* Resources */}
-            <div className="col-lg-2 col-md-6">
-              <h5 className="fw-bold">Resources</h5>
-              <ul className="list-unstyled">
-                <li>
-                  <a href="/" className="text-decoration-none text-light">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/Aboutus"
-                    className="text-decoration-none text-light"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/Services"
-                    className="text-decoration-none text-light"
-                  >
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a href="/Price" className="text-decoration-none text-light">
-                    Price
-                  </a>
-                </li>
-                <li>
-                  <a href="/Price" className="text-decoration-none text-light">
-                    Our Team
-                  </a>
-                </li>
-                <li>
-                  <a href="/Price" className="text-decoration-none text-light">
-                    Blog
-                  </a>
-                </li>
-                <li>
-                  <a href="/Price" className="text-decoration-none text-light">
-                    Contact Us
-                  </a>
-                </li>
+            <div className="footer-col" style={columnStyle}>
+              <div style={columnTitle}>Resources</div>
+              <ul style={{listStyle: "none", padding: 0, margin: 0}}>
+                <li><Link to="/" style={footerLink}>Home</Link></li>
+                <li><Link to="/Aboutus" style={footerLink}>About Us</Link></li>
+                <li><Link to="/Services" style={footerLink}>Services</Link></li>
+                <li><Link to="/Price" style={footerLink}>Price</Link></li>
+                <li><Link to="/Price" style={footerLink}>Our Team</Link></li>
+                <li><Link to="/Price" style={footerLink}>Blog</Link></li>
+                <li><Link to="/Price" style={footerLink}>Contact Us</Link></li>
               </ul>
             </div>
 
             {/* Services */}
-            <div className="col-lg-2 col-md-6">
-              <h5 className="fw-bold">Services</h5>
-              <ul className="list-unstyled">
-                <li>
-                  <a href="/" className="text-decoration-none text-light">
-                    Digital Marketing
-                  </a>
-                </li>
-                <li>
-                  <a href="/" className="text-decoration-none text-light">
-                    Web Design
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/Aboutus"
-                    className="text-decoration-none text-light"
-                  >
-                    Web Development
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/Services"
-                    className="text-decoration-none text-light"
-                  >
-                    SEO
-                  </a>
-                </li>
-                <li>
-                  <a href="/Price" className="text-decoration-none text-light">
-                    Email Marketing
-                  </a>
-                </li>
+            <div className="footer-col" style={columnStyle}>
+              <div style={columnTitle}>Services</div>
+              <ul style={{listStyle: "none", padding: 0, margin: 0}}>
+                <li><Link to="/" style={footerLink}>Digital Marketing</Link></li>
+                <li><Link to="/" style={footerLink}>Web Design</Link></li>
+                <li><Link to="/Aboutus" style={footerLink}>Web Development</Link></li>
+                <li><Link to="/Services" style={footerLink}>SEO</Link></li>
+                <li><Link to="/Price" style={footerLink}>Email Marketing</Link></li>
               </ul>
             </div>
 
             {/* Links */}
-            <div className="col-lg-2 col-md-6">
-              <h5 className="fw-bold">Links</h5>
-              <ul className="list-unstyled">
-                <li>
-                  <a href="/" className="text-decoration-none text-light">
-                    Disclaimer
-                  </a>
-                </li>
-                <li>
-                  <a href="/team" className="text-decoration-none text-light">
-                    Refund Policy
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/Contactus"
-                    className="text-decoration-none text-light"
-                  >
-                    Terms & Condition
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/Contactus"
-                    className="text-decoration-none text-light"
-                  >
-                    Privacy Policy
-                  </a>
-                </li>
+            <div className="footer-col" style={columnStyle}>
+              <div style={columnTitle}>Links</div>
+              <ul style={{listStyle: "none", padding: 0, margin: 0}}>
+                <li><Link to="/DisclaimerPage" style={footerLink}>Disclaimer</Link></li>
+                <li><Link to="/team" style={footerLink}>Refund Policy</Link></li>
+                <li><Link to="/Contactus" style={footerLink}>Terms & Condition</Link></li>
+                <li><Link to="/Contactus" style={footerLink}>Privacy Policy</Link></li>
               </ul>
             </div>
 
-            {/* Payment Methods */}
-            {/* Payment Methods */}
-            <div className="col-lg-2 col-md-6">
-              <h5 className="fw-bold">Payments</h5>
-              <div
-                className="d-flex align-items-center justify-content-between p-2 rounded border bg-white"
-                style={{ width: "180px" }}
-              >
+            {/* Payments */}
+            <div className="footer-col" style={columnStyle}>
+              <div style={columnTitle}>Payments</div>
+              <div style={paymentRow}>
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png"
                   alt="Visa"
                   style={{
-                    maxHeight: "30px",
-                    maxWidth: "50px",
-                    objectFit: "contain",
+                    maxHeight: "25px",
+                    maxWidth: "35px",
+                    objectFit: "contain"
                   }}
                 />
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"
                   alt="MasterCard"
                   style={{
-                    maxHeight: "30px",
-                    maxWidth: "50px",
-                    objectFit: "contain",
+                    maxHeight: "25px",
+                    maxWidth: "35px",
+                    objectFit: "contain"
                   }}
                 />
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
                   alt="PayPal"
                   style={{
-                    maxHeight: "30px",
-                    maxWidth: "50px",
-                    objectFit: "contain",
+                    maxHeight: "25px",
+                    maxWidth: "35px",
+                    objectFit: "contain"
                   }}
                 />
               </div>
             </div>
-
-            {/* Address */}
-            {/* <div className="col-lg-4 col-md-6">
-              <h5 className="fw-bold mt-4 mt-lg-0">Address</h5>
-              <ul className="list-unstyled text-light">
-                <li>Chennai, Tamilnadu, India</li>
-                <li>+91 9874563210</li>
-                <li>contact@gmail.com</li>
-                <li>+3214569870</li>
-              </ul>
-            </div> */}
           </div>
 
-          {/* Footer End */}
-          <hr className="border-secondary mt-4" />
-          <div className="text-center text-light small">
+          {/* Copyright */}
+          <div style={copyrightStyle}>
             Design & Developed by Shivam
           </div>
         </div>

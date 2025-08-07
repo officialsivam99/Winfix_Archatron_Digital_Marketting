@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
-import Slideshow from "../../components/Slideshow";
-import { Link } from "react-router-dom";
 import LawOfficeSliderSection from "../../components/LawOfficeSliderSection";
 import CaseStudiesZPattern from "../../components/CaseStudiesZPattern";
 import ResultsDrivenServices from "../../components/ResultsDrivenServices";
 import ServicesSection from "../../components/ServicesSection";
 import QuoteForm from "../../components/QuoteForm";
 import HeroSection from "../../components/HeroSection";
+import DisclaimerPage from "../../components/DisclaimerPage";
 
 import {
   Container,
@@ -32,6 +30,7 @@ import { FiPhone } from "react-icons/fi";
 import BrandScroller from "../BrandScroller";
 import WhyChooseUsSlider from "../WhyChooseUsSlider";
 
+
 function Home() {
   
   return (
@@ -46,6 +45,7 @@ function Home() {
       {/* HERO SECTION (Center-Aligned) */}
       
       <HeroSection />
+      <DisclaimerPage />
 
       <BrandScroller />
       <ServicesSection />
@@ -54,6 +54,7 @@ function Home() {
       <ResultsDrivenServices />
       <QuoteForm />
       <WhyChooseUsSlider />
+      
     </div>
   );
 }
