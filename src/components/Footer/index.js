@@ -165,8 +165,8 @@ export default function Footer() {
               <div style={columnTitle}>Links</div>
               <ul style={{listStyle: "none", padding: 0, margin: 0}}>
                 <li><Link to="/DisclaimerPage" style={footerLink}>Disclaimer</Link></li>
-                <li><Link to="/team" style={footerLink}>Refund Policy</Link></li>
-                <li><Link to="/Contactus" style={footerLink}>Terms & Condition</Link></li>
+                <li><Link to="/ReturnAndExchangePage" style={footerLink}>Refund Policy</Link></li>
+                <li><Link to="/TermsAndConditionsPage" style={footerLink}>Terms & Condition</Link></li>
                 <li><Link to="/Contactus" style={footerLink}>Privacy Policy</Link></li>
               </ul>
             </div>

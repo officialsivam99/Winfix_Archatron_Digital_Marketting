@@ -78,9 +78,7 @@ const MyNavbar = () => {
           </Nav>
 
           {/* Right-aligned contact info */}
-          <div className="d-none d-lg-flex align-items-center text-white fw-bold ms-lg-3 text-nowrap">
-            📞 +1 (800) 123-4567
-          </div>
+         
         </Navbar.Collapse>
       </Container>
     </Navbar>

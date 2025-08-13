@@ -21,6 +21,10 @@ import SocialMediaMarketing from './containers/SocialMedia';
 import SEO from './containers/SEO';
 import PPC from './containers/PPC'
 import EmailMarketing from './containers/Email';
+import DisclaimerPage from './components/DisclaimerPage';
+import ReturnAndExchangePage from './components/ReturnAndExchangePage';
+import TermsAndConditionsPage from './components/TermsAndConditionsPage';
+
 
 
 
@@ -45,6 +49,9 @@ function App() {
         <Route path="/SEO" element={<SEO />} />
         <Route path="/PPC" element={<PPC />} />
         <Route path="/EmailMarketing" element={<EmailMarketing />} />
+        <Route path="/DisclaimerPage" element={<DisclaimerPage />} />
+        <Route path="/ReturnAndExchangePage" element={<ReturnAndExchangePage />} />
+        <Route path="/TermsAndConditionsPage" element={<TermsAndConditionsPage/>} />
 
         
       </Routes>

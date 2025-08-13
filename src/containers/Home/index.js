@@ -45,7 +45,7 @@ function Home() {
       {/* HERO SECTION (Center-Aligned) */}
       
       <HeroSection />
-      <DisclaimerPage />
+      
 
       <BrandScroller />
       <ServicesSection />
