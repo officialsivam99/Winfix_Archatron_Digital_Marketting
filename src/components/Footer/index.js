@@ -104,7 +104,7 @@ export default function Footer() {
           <h6 style={{textTransform: "uppercase", letterSpacing: 2, fontSize: 14, color: "#444"}}>Newsletter</h6>
           <h4 style={{fontWeight: "bold", margin: "0 0 8px"}}>Subscribe To Our Newsletter</h4>
           <p style={{color: "#555", maxWidth: 550, margin: "0 auto 8px", fontSize: 15}}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Join our newsletter for the latest digital marketing insights, tips, and updates from Digital Impact. Stay ahead and grow your business with expert advice delivered to your inbox!
           </p>
           <form className="d-flex justify-content-center flex-wrap gap-2 mt-3" style={{justifyContent: "center", flexWrap: "wrap", gap: "10px"}}>
             <input
@@ -129,8 +129,10 @@ export default function Footer() {
             <div className="footer-col" style={columnStyle}>
               <div style={columnTitle}>About Us</div>
               <p style={{color: "#fff", lineHeight: 1.7, fontSize: 15}}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco.
+                Digital Impact drives growth with data-driven digital marketing: SEO, paid media, 
+                and content. Analytics attract qualified leads, increase revenue, and scale brands through
+                strategy, creativity, and measurable results.
+
               </p>
             </div>
 
@@ -140,11 +142,11 @@ export default function Footer() {
               <ul style={{listStyle: "none", padding: 0, margin: 0}}>
                 <li><Link to="/" style={footerLink}>Home</Link></li>
                 <li><Link to="/Aboutus" style={footerLink}>About Us</Link></li>
-                <li><Link to="/Services" style={footerLink}>Services</Link></li>
+                
                 <li><Link to="/Price" style={footerLink}>Price</Link></li>
-                <li><Link to="/Price" style={footerLink}>Our Team</Link></li>
-                <li><Link to="/Price" style={footerLink}>Blog</Link></li>
-                <li><Link to="/Price" style={footerLink}>Contact Us</Link></li>
+                <li><Link to="/Teams" style={footerLink}>Our Team</Link></li>
+                <li><Link to="/Blog" style={footerLink}>Blog</Link></li>
+                <li><Link to="/Contactus" style={footerLink}>Contact Us</Link></li>
               </ul>
             </div>
 
@@ -152,11 +154,11 @@ export default function Footer() {
             <div className="footer-col" style={columnStyle}>
               <div style={columnTitle}>Services</div>
               <ul style={{listStyle: "none", padding: 0, margin: 0}}>
-                <li><Link to="/" style={footerLink}>Digital Marketing</Link></li>
-                <li><Link to="/" style={footerLink}>Web Design</Link></li>
-                <li><Link to="/Aboutus" style={footerLink}>Web Development</Link></li>
-                <li><Link to="/Services" style={footerLink}>SEO</Link></li>
-                <li><Link to="/Price" style={footerLink}>Email Marketing</Link></li>
+                <li><Link to="/DigitalMarketing" style={footerLink}>Digital Marketing</Link></li>
+                <li><Link to="/WebDesign" style={footerLink}>Web Design</Link></li>
+                <li><Link to="/WebDevelopment" style={footerLink}>Web Development</Link></li>
+                <li><Link to="/SEO" style={footerLink}>SEO</Link></li>
+                <li><Link to="/EmailMarketing" style={footerLink}>Email Marketing</Link></li>
               </ul>
             </div>
 
@@ -167,7 +169,7 @@ export default function Footer() {
                 <li><Link to="/DisclaimerPage" style={footerLink}>Disclaimer</Link></li>
                 <li><Link to="/ReturnAndExchangePage" style={footerLink}>Refund Policy</Link></li>
                 <li><Link to="/TermsAndConditionsPage" style={footerLink}>Terms & Condition</Link></li>
-                <li><Link to="/Contactus" style={footerLink}>Privacy Policy</Link></li>
+                <li><Link to="/Privacy" style={footerLink}>Privacy Policy</Link></li>
               </ul>
             </div>
 
@@ -208,7 +210,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div style={copyrightStyle}>
-            Design & Developed by Shivam
+            © {new Date().getFullYear()} Digital Impact. All rights reserved.
           </div>
         </div>
       </div>

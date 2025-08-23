@@ -80,8 +80,8 @@ const DisclaimerPage = () => {
               <div>
                 <div style={styleSet.sectionTitle}>Website Disclaimer</div>
                 <p>
-                  The information provided by Archatron Technologies ("we", "us", or
-                  "our") on this website (<strong>archatrotechnologies.com</strong>) is
+                  The information provided by Digital Impact ("we", "us", or
+                  "our") on this website (<strong>digitalimpact.com</strong>) is
                   for general informational purposes only. All information is provided
                   in good faith; however, we make no representation or warranty of any
                   kind, express or implied, regarding the accuracy, adequacy, validity,

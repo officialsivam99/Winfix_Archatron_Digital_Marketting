@@ -17,14 +17,7 @@ const MyNavbar = () => {
       <Container fluid className="px-4 ">
         {/* Brand */}
         <Navbar.Brand as={Link} to="/" className="fw-bold text-uppercase d-flex align-items-center">
-          <img
-            src="/logo192.png"
-            alt="Logo"
-            width="30"
-            height="30"
-            className="d-inline-block align-top me-2"
-          />
-          Win Fix Solution
+          Digital Impact
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="navbar-nav" />
@@ -72,7 +65,7 @@ const MyNavbar = () => {
             <Nav.Link as={Link} to="/Blog" className={location.pathname === '/Blog' ? 'active' : ''}>
               Blog
             </Nav.Link>
-            <Nav.Link as={Link} to="/Contactus" className={location.pathname === '/Contactus' ? 'active' : ''}>
+            <Nav.Link as={Link} to="/ContactUs" className={location.pathname === '/ContactUs' ? 'active' : ''}>
               Contact Us
             </Nav.Link>
           </Nav>

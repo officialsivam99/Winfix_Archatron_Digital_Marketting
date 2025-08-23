@@ -50,7 +50,7 @@ const WhyChooseUsSlider = () => {
           {/* Left Section */}
           <Col md={6} className="p-5" style={{ backgroundColor: "#1a1a2e" }}>
             <h2 className="fw-bold text-white display-6 mb-3">
-              Why WinFix Solution as Your Extended Digital Marketing Team
+              Why Digital Impact as Your Extended Digital Marketing Team
             </h2>
             <p className="fs-5 text-white">
               As a leading digital marketing company, Bluemoontech understands every unique business requirement. 

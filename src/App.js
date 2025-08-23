@@ -9,7 +9,7 @@ import Home from './containers/Home';
 import Aboutus from './containers/Aboutus';
 import Teams from './containers/Teams';
 import Services from './containers/Services';
-import Contactus from './containers/Contactus';
+
 import Notfound from './containers/Notfound';
 import NewsLetters from './components/NewsLetters';
 import Price from './containers/Price';
@@ -24,6 +24,8 @@ import EmailMarketing from './containers/Email';
 import DisclaimerPage from './components/DisclaimerPage';
 import ReturnAndExchangePage from './components/ReturnAndExchangePage';
 import TermsAndConditionsPage from './components/TermsAndConditionsPage';
+import Contactus from './containers/Contactus';
+import Privacy from './containers/Privacy';
 
 
 
@@ -38,7 +40,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/Teams" element={<Teams />} />
         <Route path="/price" element={<Price />} />
-        <Route path="/contactus" element={<Contactus />} />
+        <Route path="/Contactus" element={<Contactus />} />
         {/* 404 Not Found route */}
         <Route path="*" element={<Notfound />} />
         <Route path="Blog" element={<Blog />} />
@@ -52,11 +54,12 @@ function App() {
         <Route path="/DisclaimerPage" element={<DisclaimerPage />} />
         <Route path="/ReturnAndExchangePage" element={<ReturnAndExchangePage />} />
         <Route path="/TermsAndConditionsPage" element={<TermsAndConditionsPage/>} />
+        <Route path="/Privacy" element={<Privacy />} />
 
         
       </Routes>
       
-      <NewsLetters />
+      
       <Footer />
     </div>
   );
