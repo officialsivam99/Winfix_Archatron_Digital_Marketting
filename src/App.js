@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -26,14 +26,18 @@ import ReturnAndExchangePage from './components/ReturnAndExchangePage';
 import TermsAndConditionsPage from './components/TermsAndConditionsPage';
 import Contactus from './containers/Contactus';
 import Privacy from './containers/Privacy';
+import PrintCare from './containers/print-care';
 
-
-
+import React from 'react';
 
 function App() {
+  const location = useLocation();
+
+  const hideHeaderFooter = location.pathname === '/print-care';
+
   return (
     <div className="App">
-      <Navbar />
+      {!hideHeaderFooter && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Aboutus" element={<Aboutus />} />
@@ -55,12 +59,9 @@ function App() {
         <Route path="/ReturnAndExchangePage" element={<ReturnAndExchangePage />} />
         <Route path="/TermsAndConditionsPage" element={<TermsAndConditionsPage/>} />
         <Route path="/Privacy" element={<Privacy />} />
-
-        
+        <Route path="/print-care" element={<PrintCare />} />
       </Routes>
-      
-      
-      <Footer />
+      {!hideHeaderFooter && <Footer />}
     </div>
   );
 }
