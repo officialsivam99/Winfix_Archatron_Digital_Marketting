@@ -34,7 +34,10 @@ import React from 'react';
 function App() {
   const location = useLocation();
 
-  const hideHeaderFooter = location.pathname === '/print-care';
+  const hideHeaderFooter = location.pathname === '/print-care' || location.pathname === '/printer-products';
+
+  
+  
 
   return (
     <div className="App">
