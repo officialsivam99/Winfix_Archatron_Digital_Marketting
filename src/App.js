@@ -27,6 +27,7 @@ import TermsAndConditionsPage from './components/TermsAndConditionsPage';
 import Contactus from './containers/Contactus';
 import Privacy from './containers/Privacy';
 import PrintCare from './containers/print-care';
+import PrinterProducts from "./containers/printer-products";
 
 import React from 'react';
 
@@ -60,6 +61,8 @@ function App() {
         <Route path="/TermsAndConditionsPage" element={<TermsAndConditionsPage/>} />
         <Route path="/Privacy" element={<Privacy />} />
         <Route path="/print-care" element={<PrintCare />} />
+        <Route path="/printer-products" element={<PrinterProducts />} />
+
       </Routes>
       {!hideHeaderFooter && <Footer />}
     </div>
